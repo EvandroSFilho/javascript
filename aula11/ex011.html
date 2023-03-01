@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body{
+            font: normal 11pt Arial;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite sua Nacionalidade: <input type="text" name="txtnas" id="txtnas">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+        
+    </div>
+    <script>
+        function calcular (){
+        var txtn = window.document.querySelector(`input#txtnas`)
+        var res = window.document.querySelector(`div#res`)
+        var nas = String(txtn.value)
+        res.innerHTML = `Você está vivendo em <strong>${nas}</strong>`   
+          if (nas == 'Brasil'){
+            res.innerHTML += `<p>Você é <strong>Brasileiro</strong>!</p>`
+          }else{
+            res.innerHTML += '<p>Você é <strong>Estrangeiro</strong>!</p>'
+          }
+          
+    }        
+    </script>
+ 
+</body>
+</html>
